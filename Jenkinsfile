@@ -12,8 +12,8 @@ node{
   stage("Run image") {
   	docker.image("docker-build/nginx").withRun("-p 80:8082"){ c ->
   		sh 'docker ps'
-      sh 'curl 0.0.0.0:8082'
   	}
+    echo "build image ...."
   }
   
 }
