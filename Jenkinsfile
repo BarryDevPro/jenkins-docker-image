@@ -10,7 +10,7 @@ node{
   
   
   stage("Run image") {
-  	docker.image("docker-build/nginx").withRun("-p 80:8082"){ c ->
+  	docker.image("docker-build/nginx").withRun("-p 8090:8091"){ c ->
   		sh 'docker ps'
   	}
     echo "build image ...."
